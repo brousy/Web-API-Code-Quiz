@@ -1,16 +1,36 @@
 // buttons
 
 // questions and answers elements
-var questionIndex= 0
-var questions= document.getElementById("questions")
+var questionIndex = 0
+var questions = document.getElementById("questions")
 
 // The array questions for the quiz game
-var question= [
-    {
-        question: '',
-        choices: [],
-        answer: ''
+var question = [
+
+    {//  question 1
+        question: 'How do you declare a variable in Javascript?',
+        choices: ['Var', 'Let', 'Const', 'All of the above'],
+        correctAnswer: 'All of the above'
     },
+
+    {//  question 2
+        question: 'Which operator is used for strict equality comparison in Javascript?',
+        choices: ['==', '===', '=', '!='],
+        answer: '==='
+    },
+
+    {//  question 3
+        question: 'How do you write a for loop that runs 5 times in Javascript?',
+        choices: ['For (i=0; <=4; i++', 'For (i=1; i<=4; i++)', 'For (i=1; i<=6; i++)', 'For(i=0; i<5; i++)' ],
+        answer: 'For(i=0; i<5; i++)'
+    },
+
+    {//  question 4
+        question: 'Which of the following is NOT a Javascript data type?',
+        choices: ['String', 'Number', 'Boolean', 'Float'],
+        answer: 'Float'
+    },
+
 
 ]
 
@@ -35,9 +55,9 @@ var question= [
 // go to question array
 // go to index zero 
 // question[questionIndex] 
-var current= question[questionIndex]
+var current = question[questionIndex]
 // display using textcontent line 30
-questions.textContent= current.question
+questions.textContent = current.question
 
 
 // fucntion 3
