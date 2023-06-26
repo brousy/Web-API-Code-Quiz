@@ -1,10 +1,28 @@
 // buttons
+var btnStartEl = document.querySelector("#start-game");
+var btnGoBackEl = document.querySelector("go-back");
+var btnClearScoresEl = document.querySelector("clear-high-scores");
 
-// questions and answers elements
-var questionIndex = 0
-var questions = document.getElementById("questions")
+// question & answer & timer elements
+var questionEl = document.getElementById("question");
+var answerButtonsEl = document.getElementById("answer-buttons");
+var timerEl = document.querySelector("#timer");
+timerEl.innerText = 0;
+// var score = 0;
+// var timeLeft;
+// var gameover
+
+
+
+
+
+// high score
 
 // The array questions for the quiz game
+var questions = document.getElementById("question")
+var arrayShuffledQuestions
+var questionIndex = 0
+
 var question = [
 
     {//  question 1
