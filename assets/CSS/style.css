@@ -1,5 +1,5 @@
 * {
- box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
@@ -23,6 +23,15 @@ header {
     color: pink;
 }
 
+
+/* display: flex;
+    background-color: white;
+    color: black;
+    width: 550px;
+    padding: 25px;
+    border-radius: 30px;
+    flex-direction: column;
+    align-items: center; */
 .quiz {
     display: flex;
     background-color: white;
@@ -32,7 +41,12 @@ header {
     border-radius: 30px;
     flex-direction: column;
     align-items: center;
+    margin: 0 auto;
+    Add this line to center the quiz horizontally margin-top: 50px;
+    /* Add this line to create some space between the header and the quiz */
 }
+
+
 
 /* buttons */
 button {
