@@ -1,3 +1,14 @@
+var containerQuestionEl = document.getElementById("question-container");
+var containerStarterEl = document.getElementById("starter-container");
+// diff variable name Starter
+var containerEndEl = document.getElementById("end-container");
+var containerScoreEl = document.getElementById("score-banner");
+// high score
+var formInitials = document.getElementById("initials-form");
+var ViewHighScoresEl = document.getElementById("view-high-scores");
+var containerHighScoreEl = document.getElementById("high-score-container");
+var listHighScoreEl = document.getElementById("high-score-list");
+//  correct and wrong variables missing
 // buttons
 var btnStartEl = document.querySelector("#start-game");
 var btnGoBackEl = document.querySelector("go-back");
@@ -8,15 +19,10 @@ var questionEl = document.getElementById("question");
 var answerButtonsEl = document.getElementById("answer-buttons");
 var timerEl = document.querySelector("#timer");
 timerEl.innerText = 0;
-// var score = 0;
-// var timeLeft;
-// var gameover
+var score = 0;
+var timeLeft;
+var gameover
 
-
-
-
-
-// high score
 
 // The array questions for the quiz game
 var questions = document.getElementById("question")
@@ -51,6 +57,24 @@ var question = [
 
 
 ]
+
+var renderStartPage = function(){
+    containerHighScoreEl.classList.add("hide")
+    containerHighScoreEl.classList.remove("show")
+    containerStarterEl.classList.add("show")
+    containerStarterEl.classList.remove("hide")
+    containerScoreEl.removeChild(containerScoreEl.lastChild)
+    questionIndex = 0
+    timerEl.textContent = 0
+    score = 0
+
+}
+
+var setTime = function() {
+    timeLeft = 60;
+
+    
+}
 
 // Time is subtratcted from clock with wrong answer
 
