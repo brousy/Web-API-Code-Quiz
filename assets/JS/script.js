@@ -67,6 +67,13 @@ var renderStartPage = function(){
     questionIndex = 0
     timerEl.textContent = 0
     score = 0
+    if(correctEl.className = "show"){
+        correctEl.classList.remove("show");
+        correctEl.classList.add("hide");
+    }
+    if(wrongEl.className = "show") {
+        
+    }
 
 }
 
@@ -92,8 +99,22 @@ var setTime = function() {
 // hides the starter container
 // shows the question container
 // within the function create a callout to function 2
+var startGame = function() {
+    containerStarterEl.classList.add('hide');
+    containerStarterEl.classList.add('show');
+    containerQuestionEl.classList.remove('hide');
+    containerQuestionEl.classList.add('show');
+    // Do I need to shuffle questions here
+    // arrayShuffledQuestions = questions......
+    setTime()
+    setQuestion()
 
+}
 // function 2
+
+var setQuestion =function(){
+
+}
 // go to question array
 // go to index zero 
 // question[questionIndex] 
