@@ -72,14 +72,44 @@ var renderStartPage = function(){
         correctEl.classList.add("hide");
     }
     if(wrongEl.className = "show") {
-        
+        wrongEl.classList.remove("show");
+        wrongEl.classList.add("hide");
     }
 
 }
 
+// timer and deduction for wrong answer
 var setTime = function() {
     timeLeft = 60;
 
+    var startGame = function() {
+        //add classes to show/hide start and quiz screen
+        containerStartEl.classList.add('hide');
+        containerStartEl.classList.remove('show');
+        containerQuestionEl.classList.remove('hide');
+        containerQuestionEl.classList.add('show');
+        //Shuffle the questions so they show in random order
+        arrayShuffledQuestions = questions.sort(() => Math.random() - 0.5)
+        setTime()
+        setQuestion()
+      }
+    
+    //set next question for quiz
+    var setQuestion = function() {
+        resetAnswers()
+        displayQuestion(arrayShuffledQuestions[QuestionIndex])
+    }
+
+  //on start click, start game
+  btnStartEl.addEventListener("click", startGame)
+  //on submit button -- enter or click
+  formInitials.addEventListener("submit", createHighScore)
+  //when view high-scores is clicked
+  ViewHighScoreEl.addEventListener("click", displayHighScores)
+  //Go back button
+  btnGoBackEl.addEventListener("click", renderStartPage)
+  //clear scores button
+  btnClearScoresEl.addEventListener("click", clearScores)
     
 }
 
